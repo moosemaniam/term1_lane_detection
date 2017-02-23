@@ -1,16 +1,10 @@
 #**Finding Lane Lines on the Road**
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
 
 
 [//]: # (Image References)
@@ -21,15 +15,14 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-My pipeline is described below
+###1.Pipeline description
 
-1) Convert image to greyscale and add blurring
-2) Get the edges in the image
-3) Define a region on interest to remove information that we are not interested
-in. Basically remove anything other than the road
-4) Apply hough transform to identify a set of lines
-5) I then changed the draw_lines function like below
+* Convert image to greyscale and add blurring
+* Get the edges in the image
+* Define a region on interest to remove information that we are not interested
+*n. Basically remove anything other than the road
+* Apply hough transform to identify a set of lines
+* I then changed the draw_lines function like below
    a) Calculate the slope and intercept of each line and classify them as left
    lane or right lane
    b) Once classified, take a average of these lines one for each lane
@@ -39,15 +32,15 @@ in. Basically remove anything other than the road
 
 
 
-###2. Identify potential shortcomings with your current pipeline
-1) If the road curves, the line detection picks the points on the other lane
+###2. Shortcomings of current pipeline
+*  If the road curves, the line detection picks the points on the other lane
    and the lane markings may flicker a bit
-2) In the list of lines for each lane, there may be outliers. ie lines which
+*  In the list of lines for each lane, there may be outliers. ie lines which
    are not essentially part of the lane.
 
-###3. Suggest possible improvements to your pipeline
+###3. Possible improvements to your pipeline
 
-1) Possibly fit a curve instead of a line
-2) Have a outlier detector and remove lines which have slopes and intercepts which are
+* Possibly fit a curve instead of a line
+* Have a outlier detector and remove lines which have slopes and intercepts which are
    far removed from the average slope and intercept. This might reduce the
    flickering that sometimes occurs
