@@ -32,6 +32,7 @@ The goals / steps of this project are the following:
 
 
 
+
 ###2. Shortcomings of current pipeline
 *  If the road curves, the line detection picks the points on the other lane
    and the lane markings may flicker a bit
