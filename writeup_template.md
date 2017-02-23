@@ -1,16 +1,10 @@
 #**Finding Lane Lines on the Road**
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
 
 
 [//]: # (Image References)
@@ -21,8 +15,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-My pipeline is described below
+###1.Pipeline description
 
 1) Convert image to greyscale and add blurring
 2) Get the edges in the image
@@ -39,13 +32,13 @@ in. Basically remove anything other than the road
 
 
 
-###2. Identify potential shortcomings with your current pipeline
+###2. Shortcomings of current pipeline
 1) If the road curves, the line detection picks the points on the other lane
    and the lane markings may flicker a bit
 2) In the list of lines for each lane, there may be outliers. ie lines which
    are not essentially part of the lane.
 
-###3. Suggest possible improvements to your pipeline
+###3. Possible improvements to your pipeline
 
 1) Possibly fit a curve instead of a line
 2) Have a outlier detector and remove lines which have slopes and intercepts which are
